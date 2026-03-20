@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUDROX – Budownictwo Ogólne, Przemysłowe i Energetyczne od 1988</title>
+<meta name="description" content="BUDROX Sp. z o.o. – rzetelne budownictwo ogólne, przemysłowe i energetyczne od 1988 roku. Gostynin, Mazowsze.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.delay-1{transition-delay:.1s}
+.delay-2{transition-delay:.2s}
+.delay-3{transition-delay:.3s}
+.delay-4{transition-delay:.4s}
+.delay-5{transition-delay:.5s}
+:root{
+  --o:#C8752A;--o2:#b5651f;--n:#08111F;--n2:#0d1a2e;--n3:#112038;
+  --cream:#F5F0E8;--cream2:#EDE8DF;--t:#0d1a2e;--m:#7a8494;
+  --border:rgba(255,255,255,.07);--bl:#e0d8cc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--n);color:#fff;overflow-x:hidden}
+h1,h2,h3,.hero h1,.sec,.al h2,.ar-c h3,.rq-author,.wc h3,.sv h3,.pcard h3,.ic-body h3,.cc h3{font-family:'Playfair Display',Georgia,serif}
+a{text-decoration:none;color:inherit}
+img{display:block}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(8,17,31,.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.logo{height:34px;filter:brightness(0) invert(1)}
+.logo-fb{font-size:17px;font-weight:900;letter-spacing:3px;display:none;color:#fff}
+.logo-fb span{color:var(--o)}
+.nav-c{display:flex;align-items:center;gap:28px}
+.nav-links{display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.45)}
+.nav-links a:hover{color:#fff;transition:color .2s}
+.nav-div{width:1px;height:20px;background:var(--border)}
+.nav-tel{font-size:13px;font-weight:600;color:rgba(255,255,255,.6)}
+.nav-tel:hover{color:#fff}
+.nav-cta{background:var(--o);color:#fff;padding:9px 20px;border-radius:6px;font-size:13px;font-weight:600;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--o2)}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;padding:4px;border-radius:6px;border:1px solid var(--border);background:transparent;flex-shrink:0}
+.hamburger span{display:block;width:100%;height:2px;background:rgba(255,255,255,.7);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(8,17,31,.98);backdrop-filter:blur(24px);z-index:299;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:40px 24px}
+.mobile-menu.open{display:flex}
+.mm-link{font-size:26px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:-1px;padding:10px 0;border-bottom:1px solid var(--border);width:100%;text-align:center;transition:color .2s}
+.mm-link:hover{color:#fff}
+.mm-cta{margin-top:16px;background:var(--o);color:#fff;padding:15px 40px;border-radius:8px;font-size:17px;font-weight:700;width:100%;text-align:center}
+.mm-tel{margin-top:10px;font-size:14px;color:rgba(255,255,255,.35);text-align:center}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5% 64px;position:relative;overflow:hidden;background:var(--n)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 100% 30%,rgba(200,117,42,.1) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 0% 80%,rgba(13,26,46,.8) 0%,transparent 70%)}
+.hero-line{position:absolute;top:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent)}
+.year-stamp{position:absolute;top:50%;right:4%;transform:translateY(-50%);font-size:clamp(100px,18vw,220px);font-weight:900;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.04);letter-spacing:-8px;line-height:1;pointer-events:none;user-select:none;z-index:1}
+.hc{position:relative;z-index:2;max-width:1200px;width:100%}
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:32px}
+.eline{width:28px;height:1px;background:var(--o);flex-shrink:0}
+.etxt{font-size:11px;font-weight:600;color:var(--o);letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,7.5vw,96px);font-weight:900;line-height:.98;letter-spacing:-3px;margin-bottom:40px;max-width:900px}
+.hero h1 .dim{color:rgba(255,255,255,.55)}
+.hero h1 .hl{color:var(--o);display:block}
+.hero h1 .yr{font-size:.52em;letter-spacing:-1px;color:rgba(255,255,255,.18);font-weight:900;display:block}
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:28px}
+.hero-desc p{font-size:16px;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:24px;max-width:420px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap}
+.bp{background:var(--o);color:#fff;padding:14px 28px;border-radius:6px;font-weight:600;font-size:15px;transition:background .2s,transform .15s;display:inline-block}
+.bp:hover{background:var(--o2);transform:translateY(-1px)}
+.bl{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:13px 28px;border-radius:6px;font-weight:500;font-size:15px;transition:all .2s;display:inline-block}
+.bl:hover{border-color:rgba(255,255,255,.5);color:#fff}
+.hnums{display:flex;border-top:1px solid var(--border);padding-top:36px;flex-wrap:wrap;gap:0}
+.hn{padding:0 32px 0 0;margin-right:32px;border-right:1px solid var(--border)}
+.hn:last-child{border:none;padding:0;margin:0}
+.hnv{font-size:30px;font-weight:900;letter-spacing:-2px}
+.hnv em{font-style:normal;color:var(--o)}
+.hnl{font-size:11px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.7px;margin-top:3px}
+
+/* ── HELPERS ── */
+.s{padding:80px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+h2.sec{font-size:clamp(24px,4vw,44px);font-weight:900;letter-spacing:-2px;line-height:1.05}
+.ssub{font-size:15px;color:rgba(255,255,255,.38);line-height:1.75;max-width:320px}
+.ssub.dk{color:var(--m)}
+
+/* ── DLACZEGO MY ── */
+.why{background:var(--cream);padding:72px 5%}
+.why-inner{max-width:1200px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bl);border:1px solid var(--bl);border-radius:12px;overflow:hidden;margin-top:44px}
+.wc{background:var(--cream);padding:36px 28px}
+.wcv{font-size:36px;font-weight:900;letter-spacing:-2px;color:var(--o);margin-bottom:6px}
+.wc h3{font-size:14px;font-weight:700;color:var(--t);margin-bottom:8px}
+.wc p{font-size:13px;color:var(--m);line-height:1.7}
+
+/* ── USŁUGI ── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.sv{background:var(--n2);padding:36px 28px;position:relative;transition:background .25s}
+.sv:hover{background:var(--n3)}
+.svn{font-size:11px;font-weight:700;color:rgba(255,255,255,.2);letter-spacing:1.5px;margin-bottom:18px}
+.svi{font-size:22px;margin-bottom:14px}
+.sv h3{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.3px}
+.sv p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.7}
+.sva{position:absolute;bottom:28px;right:24px;width:32px;height:32px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;color:rgba(255,255,255,.2);transition:all .2s}
+.sv:hover .sva{border-color:var(--o);color:var(--o)}
+
+/* ── O NAS ── */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bl);border:1px solid var(--bl);border-radius:20px;overflow:hidden}
+.al{background:var(--cream);padding:60px 52px;display:flex;flex-direction:column;justify-content:center}
+.al h2{font-size:clamp(22px,3vw,36px);font-weight:900;letter-spacing:-1.5px;color:var(--t);margin-bottom:18px;line-height:1.1}
+.al p{font-size:15px;color:#555;line-height:1.85;margin-bottom:14px}
+.checks{margin:18px 0 26px}
+.ci{display:flex;align-items:center;gap:12px;margin-bottom:11px;font-size:14px;color:#333}
+.cib{width:20px;height:20px;border-radius:5px;background:var(--o);display:grid;place-items:center;flex-shrink:0;font-size:10px;font-weight:800;color:#fff}
+.astats{display:flex;gap:10px}
+.ast{background:var(--cream2);border-radius:10px;padding:16px;flex:1;text-align:center}
+.astv{font-size:20px;font-weight:900;letter-spacing:-1px;color:var(--t)}
+.astv em{font-style:normal;color:var(--o)}
+.astl{font-size:10px;color:var(--m);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.ar{position:relative;overflow:hidden;min-height:460px;background:var(--n)}
+.ar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.ar-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,17,31,.95) 0%,rgba(8,17,31,.3) 60%,transparent 100%)}
+.ar-c{position:absolute;bottom:0;left:0;right:0;padding:40px}
+.artag{font-size:11px;font-weight:600;color:var(--o);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.ar-c h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.ar-c p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* ── REALIZACJE ── */
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ic{border-radius:14px;overflow:hidden;cursor:pointer;position:relative;transition:transform .2s;display:block}
+.ic:hover{transform:translateY(-4px)}
+.ic-img{height:220px;overflow:hidden;background:var(--n3);position:relative;display:flex;align-items:center;justify-content:center}
+.ic-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:100%;height:100%;background:linear-gradient(135deg,var(--n2),var(--n3));border-bottom:2px dashed rgba(200,117,42,.2)}
+.ic-ph-ico{font-size:30px;opacity:.3}
+.ic-ph-txt{font-size:11px;color:rgba(255,255,255,.2);text-align:center;line-height:1.6;max-width:140px}
+.ic-cat{position:absolute;top:12px;left:12px;background:rgba(8,17,31,.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);padding:4px 12px;border-radius:6px;font-size:11px;font-weight:600;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.8px;z-index:2}
+.ic-body{background:var(--n2);border:1px solid var(--border);border-top:none;padding:18px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ic-body h3{font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.4}
+.ic-body p{font-size:12px;color:rgba(255,255,255,.32);line-height:1.5}
+.ic-link{flex-shrink:0;width:28px;height:28px;border-radius:7px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.2);transition:all .2s;margin-top:2px}
+.ic:hover .ic-link{border-color:var(--o);color:var(--o)}
+
+/* ── REFERENCJE ── */
+.ref-bg{background:var(--cream);padding:80px 5%}
+.ref-inner{max-width:1200px;margin:0 auto}
+.rqgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.rq{background:#fff;border:1px solid var(--bl);border-radius:16px;padding:28px 24px;transition:box-shadow .2s,transform .2s}
+.rq:hover{box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-3px)}
+.rq-logo{height:30px;object-fit:contain;margin-bottom:20px;filter:grayscale(1);opacity:.5;transition:all .3s;max-width:110px}
+.rq:hover .rq-logo{filter:grayscale(0);opacity:1}
+.rq-stars{display:flex;gap:2px;margin-bottom:12px}
+.star{color:var(--o);font-size:13px}
+.rq-quote{font-size:13px;color:#444;line-height:1.8;font-style:italic;margin-bottom:18px;position:relative;padding-left:16px}
+.rq-quote::before{content:'"';position:absolute;left:0;top:-4px;font-size:24px;color:var(--o);font-style:normal;line-height:1}
+.rq-author{font-size:13px;font-weight:700;color:var(--t)}
+.rq-role{font-size:11px;color:var(--m);margin-top:2px}
+.ref-logos{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px;justify-content:center}
+.rli{border:1px solid var(--bl);border-radius:8px;padding:10px 16px;background:#fff;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+.rli:hover{border-color:var(--o)}
+.rli img{max-height:26px;max-width:84px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:all .3s}
+.rli:hover img{filter:grayscale(0);opacity:1}
+
+/* ── KONTRAHENCI ── */
+.pwrap{background:var(--cream);border-radius:20px;padding:48px 44px}
+.pch{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:16px}
+.pch h2{font-size:clamp(20px,3vw,32px);font-weight:900;letter-spacing:-1.5px;color:var(--t)}
+.pch p{font-size:14px;color:var(--m);max-width:260px;line-height:1.7}
+.pg{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.pi{border:1px solid var(--bl);border-radius:10px;padding:14px 10px;display:flex;align-items:center;justify-content:center;background:#fff;transition:border-color .2s,box-shadow .2s}
+.pi:hover{border-color:var(--o);box-shadow:0 4px 16px rgba(200,117,42,.1)}
+.pi img{max-height:32px;max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.5;transition:all .3s}
+.pi:hover img{filter:grayscale(0);opacity:1}
+
+/* ── PRODUKTY ── */
+.prod-bg{background:var(--n2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 5%}
+.prod-inner{max-width:1200px;margin:0 auto}
+.p-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px}
+.pcard{background:var(--n);border:1px solid var(--border);border-radius:14px;padding:26px 22px;transition:border-color .25s,transform .2s;position:relative;overflow:hidden}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--o);opacity:0;transition:opacity .2s}
+.pcard:hover{border-color:rgba(200,117,42,.3);transform:translateY(-3px)}
+.pcard:hover::before{opacity:1}
+.pcard-ico{width:44px;height:44px;border-radius:10px;background:rgba(200,117,42,.1);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.pcard h3{font-size:16px;font-weight:800;letter-spacing:-.4px;margin-bottom:5px}
+.pcard-lambda{font-size:12px;font-weight:700;color:var(--o);margin-bottom:10px;font-family:monospace}
+.pcard p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:14px}
+.pcard-uses{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.use-tag{background:rgba(255,255,255,.05);border:1px solid var(--border);padding:3px 8px;border-radius:5px;font-size:11px;color:rgba(255,255,255,.38)}
+.pcard-link{font-size:12px;color:var(--o);font-weight:600}
+.more-row{border:1px solid var(--border);border-radius:10px;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;font-size:14px;color:rgba(255,255,255,.35);transition:all .2s}
+.more-row:hover{border-color:var(--o);color:var(--o)}
+
+/* ── CTA ── */
+.cta{background:var(--o);padding:88px 5%;text-align:center}
+.cta h2{font-size:clamp(28px,6vw,68px);font-weight:900;letter-spacing:-3px;color:#fff;line-height:.95;margin-bottom:16px}
+.cta p{font-size:16px;color:rgba(255,255,255,.7);margin-bottom:40px;max-width:380px;margin-left:auto;margin-right:auto;line-height:1.7}
+.cta-phones{display:flex;justify-content:center;gap:40px;margin-bottom:32px;flex-wrap:wrap}
+.cp small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.55);margin-bottom:4px}
+.cp strong{font-size:20px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.bw{background:#fff;color:var(--o);padding:14px 36px;border-radius:8px;font-weight:700;font-size:16px;display:inline-block;transition:background .2s,transform .15s}
+.bw:hover{background:#f5ede2;transform:translateY(-1px)}
+
+/* ── KONTAKT ── */
+.cgrid{display:grid;grid-template-columns:1fr 1.4fr;gap:14px}
+.cc{background:var(--n2);border:1px solid var(--border);border-radius:16px;padding:36px 30px}
+.cc h3{font-size:16px;font-weight:700;margin-bottom:22px}
+.crow{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.cico{width:36px;height:36px;border-radius:9px;background:rgba(200,117,42,.1);display:grid;place-items:center;font-size:15px;flex-shrink:0}
+.crow strong{display:block;font-size:13px;margin-bottom:3px}
+.crow p,.crow a{font-size:13px;color:rgba(255,255,255,.4);line-height:1.65}
+.crow a{color:var(--o)}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.dept{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:9px;padding:11px 13px;transition:border-color .2s}
+.dept:hover{border-color:rgba(200,117,42,.3)}
+.dept small{font-size:10px;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:.6px}
+.dept a{display:block;font-size:12px;font-weight:600;color:var(--o);margin-top:3px}
+.mapw{border-radius:12px;overflow:hidden;border:1px solid var(--border);margin-top:12px}
+.mapw iframe{display:block;width:100%;height:220px;border:none;filter:grayscale(.3) contrast(1.1)}
+
+/* ── FOOTER ── */
+footer{background:#040b14;padding:32px 5%;border-top:1px solid rgba(255,255,255,.04)}
+.fi{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.fl{height:24px;filter:brightness(0) invert(1);opacity:.3}
+.flfb{font-size:14px;font-weight:900;letter-spacing:3px;color:rgba(255,255,255,.3);display:none}
+.flinks{display:flex;gap:18px;font-size:12px;color:rgba(255,255,255,.2);flex-wrap:wrap}
+.flinks a:hover{color:rgba(255,255,255,.5)}
+.fcopy{font-size:11px;color:rgba(255,255,255,.15)}
+
+/* ══════════════════════
+   TABLET — 900px
+══════════════════════ */
+@media(max-width:900px){
+  .nav-links,.nav-div,.nav-tel,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .about-wrap{grid-template-columns:1fr}
+  .ar{min-height:280px}
+  .igrid,.rqgrid,.p-cards{grid-template-columns:1fr 1fr}
+  .pg{grid-template-columns:repeat(4,1fr)}
+  .pwrap{padding:36px 28px}
+  .cgrid{grid-template-columns:1fr}
+}
+
+/* ══════════════════════
+   MOBILE — 580px
+══════════════════════ */
+@media(max-width:580px){
+  nav{padding:0 4%;height:60px}
+  .logo{height:28px}
+
+  /* HERO */
+  .hero{padding:0 4% 44px}
+  .eyebrow{margin-bottom:20px}
+  .hero h1{font-size:clamp(36px,11vw,52px);letter-spacing:-2px;margin-bottom:24px}
+  .hero-bottom{flex-direction:column;gap:20px}
+  .hero-desc p{font-size:14px;margin-bottom:18px;max-width:100%}
+  .hbtns{width:100%;flex-direction:column}
+  .bp,.bl{width:100%;text-align:center;padding:14px}
+  .hnums{gap:16px;padding-top:24px}
+  .hn{border:none;padding:0;margin:0;min-width:calc(50% - 8px)}
+  .hnv{font-size:24px}
+  .year-stamp{display:none}
+
+  /* SECTIONS */
+  .s{padding:52px 4%}
+  .sh{margin-bottom:32px}
+  h2.sec{letter-spacing:-1.5px}
+
+  /* DLACZEGO MY */
+  .why{padding:52px 4%}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .wc{padding:24px 18px}
+  .wcv{font-size:28px}
+  .wc p{display:none}
+
+  /* USŁUGI */
+  .svc-grid{grid-template-columns:1fr}
+  .sv{padding:24px 20px}
+  .sva{display:none}
+
+  /* O NAS */
+  .al{padding:36px 24px}
+  .astats{gap:6px}
+  .astv{font-size:17px}
+
+  /* REALIZACJE */
+  .igrid{grid-template-columns:1fr}
+  .ic-img{height:180px}
+
+  /* REFERENCJE */
+  .ref-bg{padding:52px 4%}
+  .rqgrid{grid-template-columns:1fr}
+
+  /* KONTRAHENCI */
+  .pwrap{padding:24px 16px}
+  .pg{grid-template-columns:repeat(3,1fr);gap:6px}
+  .pi{padding:10px 6px}
+  .pi img{max-height:24px}
+
+  /* PRODUKTY */
+  .prod-bg{padding:52px 4%}
+  .p-cards{grid-template-columns:1fr}
+  .pcard{padding:20px 18px}
+
+  /* CTA */
+  .cta{padding:60px 4%}
+  .cta h2{letter-spacing:-2px}
+  .cta-phones{gap:20px}
+  .bw{width:100%;text-align:center}
+
+  /* KONTAKT */
+  .cc{padding:24px 18px}
+  .dgrid{grid-template-columns:1fr}
+
+  /* FOOTER */
+  .fi{flex-direction:column;align-items:flex-start;gap:14px}
+  .flinks{gap:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <img src="https://budrox.eu/images/budroxx.png" alt="BUDROX" class="logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <div class="logo-fb">BUD<span>ROX</span></div>
+  <div class="nav-c">
+    <div class="nav-links">
+      <a href="#o-nas">O nas</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#inwestycje">Realizacje</a>
+      <a href="#produkty">Produkty</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="nav-div"></div>
+    <a href="tel:242354205" class="nav-tel">24 235 42-05</a>
+    <a href="#kontakt" class="nav-cta">Zapytaj o wycenę</a>
+    <button class="hamburger" id="hbg" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mmenu">
+  <a class="mm-link" href="#o-nas" onclick="closeMenu()">O nas</a>
+  <a class="mm-link" href="#uslugi" onclick="closeMenu()">Usługi</a>
+  <a class="mm-link" href="#inwestycje" onclick="closeMenu()">Realizacje</a>
+  <a class="mm-link" href="#produkty" onclick="closeMenu()">Produkty</a>
+  <a class="mm-link" href="#kontakt" onclick="closeMenu()">Kontakt</a>
+  <a class="mm-cta" href="#kontakt" onclick="closeMenu()">Zapytaj o wycenę</a>
+  <div class="mm-tel">24 235 42-05 | 24 235 57-59</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="year-stamp">1988</div>
+  <div class="hc">
+    <div class="eyebrow reveal"><div class="eline"></div><div class="etxt">Przedsiębiorstwo budowlane od 1988 roku</div></div>
+    <h1 class="reveal delay-1">Wznosimy<br><span class="dim">obiekty.</span><br><span class="hl">Budujemy zaufanie</span><span class="yr">od 1988.</span></h1>
+    <div class="hero-bottom">
+      <div class="hero-desc reveal delay-2">
+        <p>Budownictwo ogólne, przemysłowe i energetyczne. Blisko 100-osobowa kadra i ponad 35 lat doświadczenia w realizacji inwestycji które trwają.</p>
+        <div class="hbtns">
+          <a href="#inwestycje" class="bp">Zobacz realizacje</a>
+          <a href="#kontakt" class="bl">Skontaktuj się</a>
+        </div>
+      </div>
+      <div class="hnums reveal delay-3">
+        <div class="hn"><div class="hnv" data-target="35" data-suffix="+">35+</div><div class="hnl">lat na rynku</div></div>
+        <div class="hn"><div class="hnv" data-target="100" data-prefix="~">~100</div><div class="hnl">pracowników</div></div>
+        <div class="hn"><div class="hnv" data-target="11">11</div><div class="hnl">kontrahentów</div></div>
+        <div class="hn"><div class="hnv" data-target="1998">1998</div><div class="hnl">styropian od</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DLACZEGO MY -->
+<div class="why">
+  <div class="why-inner">
+    <div class="eyebrow"><div class="eline"></div><div class="etxt">Dlaczego BUDROX</div></div>
+    <h2 class="sec" style="color:var(--t)">Przewagi które mówią za nas</h2>
+    <div class="why-grid">
+      <div class="wc reveal delay-1"><div class="wcv" data-target="35" data-suffix="+">35+</div><h3>Lat doświadczenia</h3><p>Od 1988 roku realizujemy inwestycje na Mazowszu i w całej Polsce. Każdy projekt to efekt dekad sprawdzonych metod.</p></div>
+      <div class="wc reveal delay-2"><div class="wcv" data-target="100" data-prefix="~">~100</div><h3>Pracowników</h3><p>Własna kadra specjalistów — pełna kontrola nad jakością każdego etapu budowy i terminowością realizacji.</p></div>
+      <div class="wc reveal delay-3"><div class="wcv" data-target="3">3</div><h3>Województwa dostaw</h3><p>Własny transport i produkcja styropianu — Mazowsze, Łódkie i Kujawy-Pomorze. Szybko i terminowo.</p></div>
+      <div class="wc reveal delay-4"><div class="wcv" data-target="11">11</div><h3>Kluczowych kontrahentów</h3><p>Współpraca z liderami branży — Energa Operator, Budmat, Polski Cukier i inni.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- USŁUGI -->
+<div class="s" id="uslugi">
+  <div class="si">
+    <div class="sh">
+      <div><div class="eyebrow"><div class="eline"></div><div class="etxt">Zakres usług</div></div><h2 class="sec">Kompleksowe budownictwo</h2></div>
+      <p class="ssub">Od projektu po odbiór końcowy — wszystko pod jednym dachem.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="sv"><div class="svn">01</div><div class="svi">🏗️</div><h3>Budownictwo ogólne</h3><p>Obiekty mieszkalne, komercyjne i użyteczności publicznej realizowane z najwyższą starannością.</p><div class="sva">↗</div></div>
+      <div class="sv"><div class="svn">02</div><div class="svi">🏭</div><h3>Budownictwo przemysłowe</h3><p>Hale produkcyjne, magazynowe i obiekty techniczne dla największych firm w regionie.</p><div class="sva">↗</div></div>
+      <div class="sv"><div class="svn">03</div><div class="svi">⚡</div><h3>Budownictwo energetyczne</h3><p>Infrastruktura energetyczna i sieci elektroenergetyczne. Współpraca z Energa Operator.</p><div class="sva">↗</div></div>
+      <div class="sv"><div class="svn">04</div><div class="svi">🌿</div><h3>Zagospodarowanie terenów</h3><p>Tereny zielone, parki, place i pełna infrastruktura zewnętrzna obiektów.</p><div class="sva">↗</div></div>
+      <div class="sv"><div class="svn">05</div><div class="svi">🏘️</div><h3>Inwestycje deweloperskie</h3><p>Kompleksowa realizacja projektów mieszkalnych, komercyjnych i publicznych.</p><div class="sva">↗</div></div>
+      <div class="sv" style="background:rgba(200,117,42,.07);border-color:rgba(200,117,42,.15)"><div class="svn" style="color:var(--o)">06</div><div class="svi">📦</div><h3>Styropian i opakowania EPS</h3><p>Własna produkcja płyt styropianowych od 1998. Cięcie na wymiar, dostawa własnym transportem.</p><div class="sva" style="border-color:rgba(200,117,42,.3);color:var(--o)">↗</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- O NAS -->
+<div class="s" id="o-nas" style="padding-top:0">
+  <div class="si">
+    <div class="about-wrap">
+      <div class="al">
+        <div class="eyebrow"><div class="eline"></div><div class="etxt">O firmie</div></div>
+        <h2>Firma z historią,<br>która buduje przyszłość</h2>
+        <p><em style="font-family:'Playfair Display',serif;font-size:17px;color:#333;line-height:1.7;display:block;margin-bottom:16px">Precyzja nie jest u nas wartością dodaną. Jest standardem.</em> Od 1988 roku realizujemy inwestycje dla firm które nie akceptują kompromisów w jakości. Energetyka, przemysł, budownictwo ogólne — w każdym z tych obszarów zaufały nam organizacje które same stawiają sobie najwyższe wymagania.</p>
+        <p>Od 1998 roku prowadzimy produkcję płyt styropianowych. W 2016 roku rozszerzyliśmy ofertę o kształtki i przekładki EPS.</p>
+        <div class="checks">
+          <div class="ci"><div class="cib">✓</div>Ponad 35 lat nieprzerwanie na rynku</div>
+          <div class="ci"><div class="cib">✓</div>Blisko 100-osobowa wykwalifikowana kadra</div>
+          <div class="ci"><div class="cib">✓</div>Nowoczesny sprzęt budowlany i transportowy</div>
+          <div class="ci"><div class="cib">✓</div>Współpraca z podwykonawcami z całej Polski</div>
+        </div>
+        <div class="astats">
+          <div class="ast"><div class="astv">35<em>+</em></div><div class="astl">lat</div></div>
+          <div class="ast"><div class="astv">~100</div><div class="astl">pracowników</div></div>
+          <div class="ast"><div class="astv">11</div><div class="astl">kontrahentów</div></div>
+        </div>
+      </div>
+      <div class="ar">
+        <img src="https://budrox.eu/images/SZYMON/budroxy.jpg" alt="BUDROX siedziba">
+        <div class="ar-ov"></div>
+        <div class="ar-c">
+          <div class="artag">Siedziba firmy</div>
+          <h3>ul. Płocka 44A, 09-500 Gostynin</h3>
+          <p>Siedziba i zakład produkcji styropianu. Dostawy własnym transportem na terenie woj. mazowieckiego, łódzkiego i kujawsko-pomorskiego.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REALIZACJE -->
+<div class="s" id="inwestycje" style="background:var(--n2);border-top:1px solid var(--border)">
+  <div class="si">
+    <div class="sh">
+      <div><div class="eyebrow"><div class="eline"></div><div class="etxt">Realizacje</div></div><h2 class="sec">Wybrane inwestycje</h2></div>
+      <p class="ssub">Projekty które zrealizowaliśmy mówią o nas więcej niż słowa.</p>
+    </div>
+    <div class="igrid">
+      <a class="ic" href="https://budrox.eu/inwestycje/28-budowa-hali-produkcyjno-magazynowej-przy-ul-kolejowej-w-gostyninie.html" target="_blank">
+        <div class="ic-img"><div class="ic-ph"><div class="ic-ph-ico">🏭</div><div class="ic-ph-txt">Dodaj zdjęcie ukończonego obiektu</div></div><div class="ic-cat">Przemysłowe</div></div>
+        <div class="ic-body"><div><h3>Hala produkcyjno-magazynowa, Gostynin</h3><p>Kompleksowa realizacja hali produkcyjno-magazynowej.</p></div><div class="ic-link">↗</div></div>
+      </a>
+      <a class="ic" href="https://budrox.eu/inwestycje/23-budowa-hali-uslugowej-budynku-biurowego-i-budynku-socjalno-technicznego-wraz-z-infrastruktura-oraz-opracowaniem-dokumentacji-projektowej-wykonawczej-przy-ul-targowej-w-plocku.html" target="_blank">
+        <div class="ic-img"><div class="ic-ph"><div class="ic-ph-ico">🏗️</div><div class="ic-ph-txt">Dodaj zdjęcie ukończonego obiektu</div></div><div class="ic-cat">Komercyjne</div></div>
+        <div class="ic-body"><div><h3>Hala usługowa z biurami, Płock</h3><p>Budowa hali z budynkiem biurowym i socjalno-technicznym.</p></div><div class="ic-link">↗</div></div>
+      </a>
+      <a class="ic" href="https://budrox.eu/inwestycje/26-przebudowa-i-modernizacja-stacji-pras-wyslodkowych-wraz-z-urzadzeniami-towarzyszacymi-dla-krajowej-grupy-spozywczej-s-a-oddzial-cukrownia-dobrzelin-w-dobrzelinie.html" target="_blank">
+        <div class="ic-img"><div class="ic-ph"><div class="ic-ph-ico">🏭</div><div class="ic-ph-txt">Dodaj zdjęcie ukończonego obiektu</div></div><div class="ic-cat">Przemysłowe</div></div>
+        <div class="ic-body"><div><h3>Modernizacja stacji pras, Cukrownia Dobrzelin</h3><p>Dla Krajowej Grupy Spożywczej S.A.</p></div><div class="ic-link">↗</div></div>
+      </a>
+      <a class="ic" href="https://budrox.eu/inwestycje/25-wykonanie-zelbetowych-dolow-kompensacyjnych-przy-ul-targowej-w-plocku.html" target="_blank">
+        <div class="ic-img"><div class="ic-ph"><div class="ic-ph-ico">⚙️</div><div class="ic-ph-txt">Dodaj zdjęcie ukończonego obiektu</div></div><div class="ic-cat">Przemysłowe</div></div>
+        <div class="ic-body"><div><h3>Żelbetowe doły kompensacyjne, Płock</h3><p>Wykonanie żelbetowych dołów kompensacyjnych.</p></div><div class="ic-link">↗</div></div>
+      </a>
+      <a class="ic" href="https://budrox.eu/inwestycje/27-budowa-fundamentow-pod-linie-ciecia-wzdluznego-blach-oraz-pod-linie-profilarek-do-wykonywania-profili-zimnogietych.html" target="_blank">
+        <div class="ic-img"><div class="ic-ph"><div class="ic-ph-ico">🔩</div><div class="ic-ph-txt">Dodaj zdjęcie ukończonego obiektu</div></div><div class="ic-cat">Przemysłowe</div></div>
+        <div class="ic-body"><div><h3>Fundamenty pod linie cięcia blach</h3><p>Specjalistyczne fundamenty pod urządzenia przemysłowe.</p></div><div class="ic-link">↗</div></div>
+      </a>
+      <a class="ic" href="https://budrox.eu/inwestycje/24-budowa-hali-produkcyjno-magazynowej-przy-ul-targowej-w-plocku-nowa-siedziba-firmy-budmat-transport.html" target="_blank">
+        <div class="ic-img"><div class="ic-ph"><div class="ic-ph-ico">🏢</div><div class="ic-ph-txt">Dodaj zdjęcie ukończonego obiektu</div></div><div class="ic-cat">Komercyjne</div></div>
+        <div class="ic-body"><div><h3>Nowa siedziba Budmat Transport, Płock</h3><p>Hala produkcyjno-magazynowa od projektu po odbiór.</p></div><div class="ic-link">↗</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- REFERENCJE -->
+<div class="ref-bg">
+  <div class="ref-inner">
+    <div class="eyebrow"><div class="eline"></div><div class="etxt">Referencje</div></div>
+    <h2 class="sec" style="color:var(--t)">Co mówią o nas nasi kontrahenci</h2>
+    <div class="rqgrid">
+      <div class="rq">
+        <img src="https://budrox.eu/images/SZYMON/o-nas/01.jpg" alt="Energa" class="rq-logo">
+        <div class="rq-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="rq-quote">Firma BUDROX od lat realizuje dla nas zlecenia z zakresu budownictwa energetycznego. Cenimy ich za terminowość, profesjonalizm i wysoką jakość wykonania.</p>
+        <div class="rq-author">Energa Operator S.A.</div>
+        <div class="rq-role">Wieloletni partner w budownictwie energetycznym</div>
+      </div>
+      <div class="rq">
+        <img src="https://budrox.eu/images/SZYMON/o-nas/04.jpg" alt="Budmat" class="rq-logo">
+        <div class="rq-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="rq-quote">Realizacja naszej nowej siedziby przebiegła sprawnie i zgodnie z harmonogramem. BUDROX to wykonawca, któremu można powierzyć nawet najbardziej wymagające projekty.</p>
+        <div class="rq-author">Budmat Transport Sp. z o.o.</div>
+        <div class="rq-role">Budowa hali produkcyjno-magazynowej, Płock</div>
+      </div>
+      <div class="rq">
+        <img src="https://budrox.eu/images/SZYMON/o-nas/09.jpg" alt="Polski Cukier" class="rq-logo">
+        <div class="rq-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="rq-quote">Przebudowa stacji pras wyślodkowych wymagała dużego doświadczenia. BUDROX sprostał wyzwaniu, dostarczając pracę najwyższej jakości w terminie.</p>
+        <div class="rq-author">Krajowa Grupa Spożywcza S.A.</div>
+        <div class="rq-role">Modernizacja Cukrowni Dobrzelin</div>
+      </div>
+    </div>
+    <div class="ref-logos">
+      <a class="rli" href="https://energa-operator.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/01.jpg" alt="Energa"></a>
+      <a class="rli" href="https://www.budmat.com/pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/04.jpg" alt="Budmat"></a>
+      <a class="rli" href="https://www.bimerg.com" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/05.jpg" alt="Bimerg"></a>
+      <a class="rli" href="https://www.budmattransport.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/06.jpg" alt="Budmat Transport"></a>
+      <a class="rli" href="https://www.polski-cukier.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/09.jpg" alt="Polski Cukier"></a>
+      <a class="rli" href="https://prdgostynin.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/08.jpg" alt="PRD Gostynin"></a>
+    </div>
+  </div>
+</div>
+
+<!-- KONTRAHENCI -->
+<div class="s" style="padding-top:40px">
+  <div class="si">
+    <div class="pwrap">
+      <div class="pch">
+        <div><div class="eyebrow"><div class="eline"></div><div class="etxt">Zaufali nam</div></div><h2>Kluczowi kontrahenci</h2></div>
+        <p>Wieloletnie relacje z liderami branży energetycznej, spożywczej i budowlanej.</p>
+      </div>
+      <div class="pg">
+        <a class="pi" href="https://energa-operator.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/01.jpg" alt="Energa Operator"></a>
+        <a class="pi" href="https://wykonawstwo.energa-operator.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/02.jpg" alt="Energa"></a>
+        <a class="pi" href="https://www.budmat.com/pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/04.jpg" alt="Budmat"></a>
+        <a class="pi" href="https://www.bimerg.com" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/05.jpg" alt="Bimerg"></a>
+        <a class="pi" href="https://www.budmattransport.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/06.jpg" alt="Budmat Transport"></a>
+        <a class="pi" href="https://uriarte.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/07.jpg" alt="Uriarte"></a>
+        <a class="pi" href="https://prdgostynin.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/08.jpg" alt="PRD Gostynin"></a>
+        <a class="pi" href="https://www.polski-cukier.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/09.jpg" alt="Polski Cukier"></a>
+        <a class="pi" href="https://www.safybox.com/pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/10.jpg" alt="Safybox"></a>
+        <a class="pi" href="https://www.softhard.com.pl" target="_blank"><img src="https://budrox.eu/images/SZYMON/o-nas/11.jpg" alt="Softhard"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUKTY -->
+<div class="prod-bg" id="produkty">
+  <div class="prod-inner">
+    <div class="sh">
+      <div><div class="eyebrow"><div class="eline"></div><div class="etxt">Produkcja własna</div></div><h2 class="sec">Styropian i opakowania EPS</h2></div>
+      <p class="ssub">Producent od 1998. Cięcie na wymiar. Dostawa własnym transportem — 3 województwa.</p>
+    </div>
+    <div class="p-cards">
+      <div class="pcard"><div class="pcard-ico">🌡️</div><h3>GRAFIT 031</h3><div class="pcard-lambda">λ = 0.031 W/(m·K)</div><p>Najlepszy współczynnik izolacji. Cieńsza warstwa przy tej samej skuteczności co EPS 70.</p><div class="pcard-uses"><span class="use-tag">Ściany zewnętrzne</span><span class="use-tag">Ocieplenia</span><span class="use-tag">Stropodachy</span></div><a class="pcard-link" href="https://budrox.eu/images/SZYMON/styropian2023/GRAFIT031.pdf" target="_blank">Deklaracja właściwości →</a></div>
+      <div class="pcard"><div class="pcard-ico">🔲</div><h3>EPS 100-038</h3><div class="pcard-lambda">λ = 0.038 W/(m·K)</div><p>Do miejsc wymagających przenoszenia obciążeń. Idealne pod ogrzewanie podłogowe i dachy.</p><div class="pcard-uses"><span class="use-tag">Podłogi</span><span class="use-tag">Ogrzewanie podłogowe</span><span class="use-tag">Dachy</span></div><a class="pcard-link" href="https://budrox.eu/images/SZYMON/styropian2023/EPS100.pdf" target="_blank">Deklaracja właściwości →</a></div>
+      <div class="pcard"><div class="pcard-ico">📦</div><h3>Kształtki i opakowania EPS</h3><div class="pcard-lambda">Produkcja na zamówienie</div><p>Kształtki, pojemniki izotermiczne, narożniki i przekładki. Indywidualne formy od 2016 roku.</p><div class="pcard-uses"><span class="use-tag">Opakowania</span><span class="use-tag">Izotermiczne</span><span class="use-tag">Przekładki</span></div><a class="pcard-link" href="mailto:marketing@budrox.eu">Zapytaj o wycenę →</a></div>
+    </div>
+    <a href="https://budrox.eu/produktu.html" target="_blank" class="more-row">
+      <span>Pełna oferta — 8 rodzajów płyt styropianowych z deklaracjami właściwości</span>
+      <span style="color:var(--o);font-weight:700;font-size:18px">→</span>
+    </a>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Masz projekt?<br>Porozmawiajmy.</h2>
+  <p>Do każdego klienta podchodzimy indywidualnie. Odpowiemy szybko i konkretnie.</p>
+  <div class="cta-phones">
+    <div class="cp"><small>Telefon główny</small><strong>24 235 42-05</strong></div>
+    <div class="cp"><small>Telefon</small><strong>24 235 57-59</strong></div>
+    <div class="cp"><small>Sekretariat</small><strong>24 235 26 59</strong></div>
+  </div>
+  <a href="mailto:sekretariat@budrox.eu" class="bw">Napisz do nas →</a>
+</div>
+
+<!-- KONTAKT -->
+<div class="s" id="kontakt" style="background:var(--n2);border-top:1px solid var(--border)">
+  <div class="si">
+    <div class="eyebrow"><div class="eline"></div><div class="etxt">Dane firmy</div></div>
+    <h2 class="sec" style="margin-bottom:28px">Kontakt</h2>
+    <div class="cgrid">
+      <div>
+        <div class="cc" style="margin-bottom:12px">
+          <h3>Informacje kontaktowe</h3>
+          <div class="crow"><div class="cico">📍</div><div><strong>Adres</strong><p>ul. Płocka 44A, 09-500 Gostynin</p></div></div>
+          <div class="crow"><div class="cico">📞</div><div><strong>Telefon</strong><p>24 235 42-05 | 24 235 57-59<br>Sekretariat: 24 235 26 59</p></div></div>
+          <div class="crow"><div class="cico">🏛️</div><div><strong>Dane rejestrowe</strong><p>NIP: 775-000-14-73 | REGON: 008028720<br>KRS: 0000110217</p></div></div>
+        </div>
+        <div class="mapw">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.5!2d19.4607!3d52.4261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471c6e1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sBUDROX!5e0!3m2!1spl!2spl!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokalizacja BUDROX"></iframe>
+        </div>
+      </div>
+      <div class="cc">
+        <h3>Działy i adresy email</h3>
+        <div class="dgrid">
+          <div class="dept"><small>Sekretariat</small><a href="mailto:sekretariat@budrox.eu">sekretariat@budrox.eu</a></div>
+          <div class="dept"><small>Dyrektor Techniczny</small><a href="mailto:p.lisinski@budrox.eu">p.lisinski@budrox.eu</a></div>
+          <div class="dept"><small>Produkcja i Zaopatrzenie</small><a href="mailto:k.wackowski@budrox.eu">k.wackowski@budrox.eu</a></div>
+          <div class="dept"><small>Kierownik styropianu</small><a href="mailto:t.sajak@budrox.eu">t.sajak@budrox.eu</a></div>
+          <div class="dept"><small>Księgowość</small><a href="mailto:ksiegowosc@budrox.eu">ksiegowosc@budrox.eu</a></div>
+          <div class="dept"><small>Dział Techniczny</small><a href="mailto:annaledzion@budrox.eu">annaledzion@budrox.eu</a></div>
+          <div class="dept"><small>Sprzedaż i Marketing</small><a href="mailto:marketing@budrox.eu">marketing@budrox.eu</a></div>
+          <div class="dept"><small>Dział Kadr</small><a href="mailto:kadry@budrox.eu">kadry@budrox.eu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <img src="https://budrox.eu/images/budroxx.png" alt="BUDROX" class="fl" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="flfb">BUDROX</div>
+    <div class="flinks">
+      <a href="#o-nas">O nas</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#inwestycje">Realizacje</a>
+      <a href="#produkty">Produkty</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="fcopy">© 2025 BUDROX Sp. z o.o. | ul. Płocka 44A, 09-500 Gostynin</div>
+  </div>
+</footer>
+
+<script>
+// ── HAMBURGER ──
+const hbg=document.getElementById('hbg');
+const mm=document.getElementById('mmenu');
+function closeMenu(){hbg.classList.remove('open');mm.classList.remove('open');document.body.style.overflow='';}
+hbg.addEventListener('click',()=>{
+  hbg.classList.toggle('open');
+  mm.classList.toggle('open');
+  document.body.style.overflow=mm.classList.contains('open')?'hidden':'';
+});
+
+// ── SCROLL REVEAL ──
+const revealObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.1});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revealObs.observe(el));
+setTimeout(()=>{document.querySelectorAll('.hero .reveal').forEach(el=>el.classList.add('visible'))},100);
+
+// ── LICZNIKI ──
+function animateCounter(el,target,duration,prefix,suffix){
+  const start=performance.now();
+  const isYear=target>1000;
+  const startVal=isYear?1980:0;
+  function update(now){
+    const elapsed=now-start;
+    const progress=Math.min(elapsed/duration,1);
+    const ease=1-Math.pow(1-progress,3);
+    const current=Math.round(startVal+(target-startVal)*ease);
+    el.textContent=(prefix||'')+current+(suffix||'');
+    if(progress<1)requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+const counterObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!e.target.dataset.counted){
+      e.target.dataset.counted='1';
+      animateCounter(e.target,parseInt(e.target.dataset.target),1800,e.target.dataset.prefix||'',e.target.dataset.suffix||'');
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+</script>
+</body>
+</html>
